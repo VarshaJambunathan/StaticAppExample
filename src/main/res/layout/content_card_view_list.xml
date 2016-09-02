@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+       <RelativeLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
+           <android.support.v7.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="70dp"
+               android:id="@+id/t1">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:textSize="25sp"
+                   android:textColor="#080000"
+                   android:paddingLeft="16dp"
+                   android:layout_height="60dp"
+                   android:text="Pre-requisites" />
+           </android.support.v7.widget.CardView>
+
+           <android.support.v7.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="70dp"
+               android:id="@+id/t2"
+               android:layout_below="@id/t1">
+               <TextView
+                   android:layout_height="60dp"
+                   android:text="Sai Vrat Story"
+                   android:layout_width="wrap_content"
+                   android:textSize="25sp"
+                   android:textColor="#080000"
+                   android:paddingLeft="16dp"/>
+           </android.support.v7.widget.CardView>
+
+           <android.support.v7.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="70dp"
+               android:id="@+id/t3"
+               android:layout_below="@id/t2">
+               <TextView
+                   android:layout_height="60dp"
+                   android:text="Sai Bhavani"
+                   android:layout_width="wrap_content"
+                   android:textSize="25sp"
+                   android:textColor="#080000"
+                   android:paddingLeft="16dp"/>
+           </android.support.v7.widget.CardView>
+
+           <android.support.v7.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="70dp"
+               android:id="@+id/t4"
+               android:layout_below="@id/t3">
+               <TextView
+                   android:layout_height="60dp"
+                   android:text="Datta Bhavani"
+                   android:layout_width="wrap_content"
+                   android:textSize="25sp"
+                   android:textColor="#080000"
+                   android:paddingLeft="16dp"/>
+           </android.support.v7.widget.CardView>
+
+           <android.support.v7.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="70dp"
+               android:id="@+id/t5"
+               android:layout_below="@id/t4">
+               <TextView
+                   android:layout_height="60dp"
+                   android:text="Shri Sai Chalisa"
+                   android:layout_width="wrap_content"
+                   android:textSize="25sp"
+                   android:textColor="#080000"
+                   android:paddingLeft="16dp"/>
+           </android.support.v7.widget.CardView>
+
+           <android.support.v7.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="70dp"
+               android:id="@+id/t6"
+               android:layout_below="@id/t5">
+               <TextView
+                   android:layout_height="60dp"
+                   android:text="Archana : Guru OM"
+                   android:layout_width="wrap_content"
+                   android:textSize="25sp"
+                   android:textColor="#080000"
+                   android:paddingLeft="16dp"/>
+           </android.support.v7.widget.CardView>
+
+           <android.support.v7.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="70dp"
+               android:id="@+id/t7"
+               android:layout_below="@id/t6">
+               <TextView
+                   android:layout_height="60dp"
+                   android:text="Naivedya"
+                   android:layout_width="wrap_content"
+                   android:textSize="25sp"
+                   android:textColor="#080000"
+                   android:paddingLeft="16dp"/>
+           </android.support.v7.widget.CardView>
+
+           <android.support.v7.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="70dp"
+               android:id="@+id/t8"
+               android:layout_below="@id/t7">
+               <TextView
+                   android:layout_height="60dp"
+                   android:text="Arati"
+                   android:layout_width="wrap_content"
+                   android:textSize="25sp"
+                   android:textColor="#080000"
+                   android:paddingLeft="16dp"/>
+           </android.support.v7.widget.CardView>
+
+           <android.support.v7.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="70dp"
+               android:id="@+id/t9"
+               android:layout_below="@id/t8">
+               <TextView
+                   android:layout_height="60dp"
+                   android:text="Eleven Promises"
+                   android:layout_width="wrap_content"
+                   android:textSize="25sp"
+                   android:textColor="#080000"
+                   android:paddingLeft="16dp"/>
+           </android.support.v7.widget.CardView>
+
+           <android.support.v7.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="70dp"
+               android:id="@+id/t10"
+               android:layout_below="@id/t9">
+               <TextView
+                   android:layout_height="60dp"
+                   android:text="Glossary"
+                   android:layout_width="wrap_content"
+                   android:textSize="25sp"
+                   android:textColor="#080000"
+                   android:paddingLeft="16dp"/>
+           </android.support.v7.widget.CardView>
+
+       </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
