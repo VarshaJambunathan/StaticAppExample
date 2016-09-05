@@ -7,11 +7,13 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="true">
+
         <activity
-            android:name=".SplashLauncher"
+            android:name=".SplashScreen"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_splash_launcher"
+            android:label="@string/title_activity_splash_screen"
             android:theme="@style/FullscreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +24,26 @@
         <activity
             android:name=".CardViewList"
             android:label="@string/title_activity_card_view_list"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!-- Deep links
+                 So that google can reference the app ; allow traffic on installs or search
+            -->
+            <intent-filter android:label="Sai Vrat">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "http://www.github.com/VarshaJambunathan” -->
+                <data android:scheme="http"
+                    android:host="www.github.com/VarshaJambunathan"
+                    android:pathPrefix="/VarshaJambunathan" />
+                <!-- note that the leading "/" is required for pathPrefix-->
+                <!-- Accepts URIs that begin with "example://gizmos”
+                <data android:scheme="example"
+                      android:host="gizmos" />
+                -->
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

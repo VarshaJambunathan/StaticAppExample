@@ -3,6 +3,8 @@
 
     <string name="title_activity_splash_launcher">SplashLauncher</string>
     <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="dummy_content">copyright 2016</string>
     <string name="title_activity_card_view_list">CardViewList</string>
+
+    <string name="title_activity_splash_screen">SplashScreen</string>
 </resources>

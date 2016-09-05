@@ -13,7 +13,7 @@ import android.view.View;
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-public class SplashLauncher extends AppCompatActivity {
+public class SplashScreen extends AppCompatActivity {
     /**
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -24,7 +24,7 @@ public class SplashLauncher extends AppCompatActivity {
      * If {@link #AUTO_HIDE} is set, the number of milliseconds to wait after
      * user interaction before hiding the system UI.
      */
-    private static final int AUTO_HIDE_DELAY_MILLIS = 2000;
+    private static final int AUTO_HIDE_DELAY_MILLIS = 3000;
 
     /**
      * Some older devices needs a small delay between UI widget updates
@@ -88,7 +88,7 @@ public class SplashLauncher extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_splash_launcher);
+        setContentView(R.layout.activity_splash_screen);
 
         mVisible = true;
         mControlsView = findViewById(R.id.fullscreen_content_controls);
@@ -96,15 +96,15 @@ public class SplashLauncher extends AppCompatActivity {
 
 
         // Set up the user interaction to manually show or hide the system UI.
-
-
-        // Upon interacting with UI controls, delay any scheduled hide()
-        // operations to prevent the jarring behavior of controls going away
-        // while interacting with the UI.
-        //findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
+        mContentView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toggle();
+            }
+        });
 
         new Handler().postDelayed(new Runnable() {
-//import andoid.os.Handler
+        //import andoid.os.Handler
 
             /*
              * Showing splash screen with a timer. This will be useful when you
@@ -115,13 +115,18 @@ public class SplashLauncher extends AppCompatActivity {
             public void run() {
                 // This method will be executed once the timer is over
                 // Start your app main activity
-                Intent i = new Intent(SplashLauncher.this, CardViewList.class);
+                Intent i = new Intent(SplashScreen.this, CardViewList.class);
                 startActivity(i);
 
                 // close this activity
                 finish();
             }
         }, AUTO_HIDE_DELAY_MILLIS);
+
+    // Upon interacting with UI controls, delay any scheduled hide()
+        // operations to prevent the jarring behavior of controls going away
+        // while interacting with the UI.
+
     }
 
     @Override
@@ -131,7 +136,7 @@ public class SplashLauncher extends AppCompatActivity {
         // Trigger the initial hide() shortly after the activity has been
         // created, to briefly hint to the user that UI controls
         // are available.
-        //delayedHide(100);
+        delayedHide(100);
     }
 
     private void toggle() {
