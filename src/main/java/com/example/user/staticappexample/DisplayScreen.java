@@ -3,6 +3,7 @@ package com.example.user.staticappexample;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,12 +21,21 @@ public class DisplayScreen extends AppCompatActivity {
 
         mDisplayFile=(TextView)findViewById(R.id.display);
 
-        //Displaying text from a file
-        InputStream is = null;
+        String value = getIntent().getExtras().getString("fileName");
+
+        if(value != null)
+            DisplayFile(value);
+        else
+            Toast.makeText(DisplayScreen.this, "Error loading file...", Toast.LENGTH_SHORT).show();
+    }
+
+    //Function to Decide which file should be displayed
+    //Displaying text from a file
+    public void DisplayFile(String file){
         String entireFile = "";
 
         try {
-            is = getAssets().open("story");
+            InputStream is = getAssets().open(file);
             BufferedReader br = new BufferedReader(new InputStreamReader(is));
             String line;
 
