@@ -7,4 +7,15 @@
     <string name="title_activity_card_view_list">CardViewList</string>
 
     <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="title_activity_display_screen">DisplayScreen</string>
+    <string name="pre_requisites">Pre-requisites</string>
+    <string name="sai_vrat_story">Sai Vrat Story</string>
+    <string name="sai_bhavani">Sai Bhavani</string>
+    <string name="datta_bhavani">Datta Bhavani</string>
+    <string name="shri_sai_chalisa">Shri Sai Chalisa</string>
+    <string name="archana_guru_om">Archana : Guru OM</string>
+    <string name="naivedya">Naivedya</string>
+    <string name="arati">Arati</string>
+    <string name="eleven_promises">Eleven Promises</string>
+    <string name="glossary">Glossary</string>
 </resources>
